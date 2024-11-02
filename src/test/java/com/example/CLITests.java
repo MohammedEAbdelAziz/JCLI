@@ -1,10 +1,11 @@
-
 package com.example;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.*;
 import java.util.*;
+
+
 
 public class CLITests {
 
@@ -16,7 +17,7 @@ public class CLITests {
         assertTrue(outputFile.exists());
         try (BufferedReader reader = new BufferedReader(new FileReader(outputFile))) {
             String line = reader.readLine();
-            assertEquals(new File(".").getAbsolutePath(), line+"\\.");
+            assertEquals(new File(".").getAbsolutePath(), line + "/.");
         }
     }
 
@@ -166,16 +167,4 @@ public class CLITests {
         outputFile.delete();
     }
 
-    // @Test
-    // public void testPipe() throws IOException, InterruptedException {
-    //     List<String> commandList = Arrays.asList("echo", "Hello, World!", "|", "cat", ">", "output.txt");
-    //     Main.handleSpecialCases(commandList);
-    //     File outputFile = new File(Main.getCurrentDir(), "output.txt");
-    //     assertTrue(outputFile.exists());
-    //     try (BufferedReader reader = new BufferedReader(new FileReader(outputFile))) {
-    //         String line = reader.readLine();
-    //         assertEquals("Hello, World!", line.trim());
-    //     }
-    //     outputFile.delete();
-    // }
 }

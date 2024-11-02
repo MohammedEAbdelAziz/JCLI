@@ -187,7 +187,7 @@ public class Main {
         System.out.println("cd <dir> - Change directory");
         System.out.println("ls - List directory contents");
         System.out.println("ls -a - List all directory contents including hidden files");
-        System.out.println("ls -r - List directory contents recursively");
+        System.out.println("ls -r - List directory contents reversed");
         System.out.println("mkdir <dir> - Create a new directory");
         System.out.println("rmdir <dir> - Remove a directory");
         System.out.println("touch <file> - Create a new file");
